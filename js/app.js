@@ -28,7 +28,7 @@ function uploadFile() {
 }
 
 // Função para recuperar arquivos do Firebase Storage
-function displayFiles1() {
+function displayAllFiles() {
   var fileList = document.getElementById('fileList');
   fileList.innerHTML = ''; // Limpar a lista de arquivos
 
@@ -98,7 +98,8 @@ function displayFiles() {
                 var fileContainer = document.createElement('div');
                 fileContainer.classList.add('file-container'); // Adicionar a classe
 
-                if (item.name.toLowerCase().endsWith('.jpg') || item.name.toLowerCase().endsWith('.jpeg') || item.name.toLowerCase().endsWith('.png')) {
+                if ( item.name.toLowerCase().endsWith('.jpg') || item.name.toLowerCase().endsWith('.jpeg') 
+                  || item.name.toLowerCase().endsWith('.png') || item.name.toLowerCase().endsWith('.gif')) {
                   // Se for uma imagem, exibir miniatura
                   var img = document.createElement('img');
                   img.src = url; // Usar a variável url diretamente
